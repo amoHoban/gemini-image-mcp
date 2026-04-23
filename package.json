@@ -1,0 +1,43 @@
+{
+  "name": "gemini-image-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Gemini image generation + editing. Drop-in successor to the stale nano-banana MCP.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amoHoban/gemini-image-mcp.git"
+  },
+  "homepage": "https://github.com/amoHoban/gemini-image-mcp",
+  "bugs": "https://github.com/amoHoban/gemini-image-mcp/issues",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "gemini",
+    "nano-banana",
+    "image-generation"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "gemini-image-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@google/genai": "^0.10.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "zod": "^3.23.8"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
